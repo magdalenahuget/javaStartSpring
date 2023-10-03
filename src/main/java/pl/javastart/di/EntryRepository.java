@@ -3,6 +3,7 @@ package pl.javastart.di;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
+import java.io.File;
 import java.io.IOException;
 import java.util.*;
 
@@ -11,8 +12,7 @@ class EntryRepository {
     private List<Entry> entries;
 
     @Autowired
-    EntryRepository() {
-        FileService fileService = new FileService();
+    EntryRepository(FileService fileService) {
         try {
             this.entries = fileService.readAllFile();
         } catch (IOException e) {

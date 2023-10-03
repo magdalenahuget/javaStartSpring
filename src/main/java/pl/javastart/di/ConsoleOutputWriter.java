@@ -2,6 +2,7 @@ package pl.javastart.di;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import pl.javastart.di.formatter.TextFormatter;
 
 @Service
 class ConsoleOutputWriter {
